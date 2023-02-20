@@ -1,0 +1,234 @@
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git checkout Bug1
+Switched to branch 'Bug1'
+Your branch is up to date with 'origin/Bug1'.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug1)
+$ git log --oneline
+0b166ab (HEAD -> Bug1, origin/Bug1) All git commands deleted
+5d069b9 File15 added to Bug1
+2f75d32 One file
+979aa70 till lec 8
+fe51841 lec3 Commit
+6721e02 Third Commit
+a664c2e Second Commit
+0c1a4a5 Initial Commit
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug1)
+$ git checkout Bug2
+Switched to branch 'Bug2'
+Your branch is up to date with 'origin/Bug2'.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug2)
+$ git log --oneline
+9d70cf2 (HEAD -> Bug2, origin/Bug2) File25 added to Bug2 Branch
+19c74b4 two file
+2f75d32 One file
+979aa70 till lec 8
+fe51841 lec3 Commit
+6721e02 Third Commit
+a664c2e Second Commit
+0c1a4a5 Initial Commit
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug2)
+$ git checkout Bug1
+Switched to branch 'Bug1'
+Your branch is up to date with 'origin/Bug1'.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug1)
+$ git merge Bug2
+Merge made by the 'ort' strategy.
+ lec 9/file2.txt  | 1 +
+ lec 9/file25.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 lec 9/file2.txt
+ create mode 100644 lec 9/file25.txt
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug1)
+$ git push -u origin Bug1
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 417 bytes | 208.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/abhi01-01/Git-Tutorial.git
+   0b166ab..9c3c03d  Bug1 -> Bug1
+branch 'Bug1' set up to track 'origin/Bug1'.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug1)
+$ git status
+On branch Bug1
+Your branch is up to date with 'origin/Bug1'.
+
+nothing to commit, working tree clean
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (Bug1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch
+  Bug1
+  Bug2
+  Bug3
+  Bug4
+* master
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch -d Bug1
+warning: deleting branch 'Bug1' that has been merged to
+         'refs/remotes/origin/Bug1', but not yet merged to HEAD.
+Deleted branch Bug1 (was 9c3c03d).
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch
+  Bug2
+  Bug3
+  Bug4
+* master
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git push -d origin Bug1
+To https://github.com/abhi01-01/Git-Tutorial.git
+ - [deleted]         Bug1
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch -d Bug2
+Deleted branch Bug2 (was 9d70cf2).
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch -d Bug3
+Deleted branch Bug3 (was b95ad42).
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch -d Bug4
+Deleted branch Bug4 (was b6fa52f).
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git push -d origin Bug2
+To https://github.com/abhi01-01/Git-Tutorial.git
+ - [deleted]         Bug2
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git push -d origin Bug3
+To https://github.com/abhi01-01/Git-Tutorial.git
+ - [deleted]         Bug3
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git push -d origin Bug4
+To https://github.com/abhi01-01/Git-Tutorial.git
+ - [deleted]         Bug4
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 9 (master)
+$ git branch
+* master
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ touch file1.txt
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git add .
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git commit -m "c1-m"
+[master ed21077] c1-m
+ 4 files changed, 4 insertions(+)
+ create mode 100644 lec 10 - 12/file1.txt
+ create mode 100644 lec 10 - 12/lec 11 conflict 1.jpg
+ create mode 100644 lec 10 - 12/lec 11 conflict 2.jpg
+ create mode 100644 lec 10 - 12/lec 11 conflict 3.jpg
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git branch Bug1
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git add .
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git commit -m "c2-m"
+[master 5d72249] c2-m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git checkout Bug1
+Switched to branch 'Bug1'
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (Bug1)
+$ git add .
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (Bug1)
+$ git commit -m "c2-n"
+[Bug1 beefed3] c2-n
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (Bug1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git merge Bug1
+Auto-merging lec 10 - 12/file1.txt
+CONFLICT (content): Merge conflict in lec 10 - 12/file1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master|MERGING)
+$ git add .
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master|MERGING)
+$ git commit -m "c2-m"
+[master 7827e74] c2-m
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$ git push -u origin master
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (16/16), 162.50 KiB | 8.12 MiB/s, done.
+Total 16 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/abhi01-01/Git-Tutorial.git
+   4da9591..7827e74  master -> master
+branch 'master' set up to track 'origin/master'.
+
+abhis@DESKTOP-FTJSIDB MINGW64 /d/Git Tut/Git Demo/lec 10 - 12 (master)
+$
